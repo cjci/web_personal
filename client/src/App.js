@@ -1,42 +1,22 @@
-import React from "react";
-import {  Routes, Route, Link} from "react-router-dom";
-
 import "./App.scss";
-
-
+import Admin from "./pages/Admin";
+import SingIn from "./pages/Admin/SingIn"
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 
 function App() {
-
   
   return (
-
-    
+   
       <div className="app">
-        <h1>Sistema de rutas Basico</h1> 
 
-        <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="users" element={<Users />} />
-        
-      </Routes>       
+        <h1>Aqui desde el app</h1>
+        <Admin />
+        <SingIn />
+        <Home />
+        <Contact />
       </div>
-     
-    
   );
 }
-
-function Home(){
-  return <h2>Estamos en el componente Home</h2>;
-};
-
-function Contact(){
-  return <h2>Estamos en el componente Contact...</h2>;
-};
-
-function Users(){
-  return <h2>Estamos en el componente Users...</h2>;
-};
-
 
 export default App;
